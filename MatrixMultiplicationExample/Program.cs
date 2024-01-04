@@ -110,7 +110,7 @@ namespace MatrixMultiplicationExample
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    matrix[i, j] = rand.Next(1, 10); // Adjust the range based on your requirements
+                    matrix[i, j] = rand.Next(1, 100); // Adjust the range based on your requirements
                 }
             }
 
