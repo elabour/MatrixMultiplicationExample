@@ -64,8 +64,10 @@ namespace MatrixMultiplicationExample
             int colsB = matrixB.GetLength(1);
 
             int[,] result = new int[rowsA, colsB];
-
-            Parallel.For(0, rowsA, i =>
+            ParallelOptions options = new ParallelOptions();
+            options.MaxDegreeOfParallelism = Environment.ProcessorCount;
+          
+            Parallel.For(0, rowsA,options, i =>
             {
                 for (int j = 0; j < colsB; j++)
                 {
